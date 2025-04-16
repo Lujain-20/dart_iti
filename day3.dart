@@ -42,3 +42,23 @@
 
 // ------------------------------------------------------------
 // task (3)
+class BankAccount {
+  double _balance = 0.0; 
+
+  double get balance => _balance;
+
+  set deposit(double value) {
+    if (value < 0) {
+      print ("error disallow negative deposits ");
+    } else {
+      _balance += value;  
+    }
+  }
+}
+
+void main() {
+  var account = BankAccount();
+  account.deposit = 500; 
+  print(account.balance); 
+  account.deposit = -100;  
+}
